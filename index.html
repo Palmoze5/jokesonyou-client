@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Jokes On You</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+      <h1>jokesOnYou!</h1>
+  <h2>(A place where wannabe comedians can make, view, update and delete their jokes)</h2>
+
+  <div id="auth-messages"></div>
+
+  <form id="sign-up" class="border">
+    <fieldset>
+      <legend>Sign up</legend>
+      <input type="text" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" required>
+      <input type="submit" value="Sign up">
+    </fieldset>
+  </form>
+
+  <form id="sign-in" class="border">
+    <fieldset>
+      <legend>Sign in</legend>
+      <input type="text" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <input type="submit" value="Sign in">
+    </fieldset>
+  </form>
+
+  <form id="change-password" class="border hidden">
+    <fieldset>
+      <legend>Change Password?</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password" required>
+      <input type="password" name="passwords[new]" placeholder="New Password" required>
+      <input type="submit" value="Change Password">
+    </fieldset>
+  </form>
+
+  <form id="sign-out" class="border hidden">
+    <fieldset>
+      <legend>Sign Out</legend>
+      <input type="submit" value="Sign out">
+    </fieldset>
+  </form>
+
+<div id="create-message"></div>
+<h4 class="user-message"></h4>
+  <form id="create-joke" class="border hidden">
+    <fieldset>
+      <legend>Create Your Own Joke</legend>
+      <input type="text" name="joke[joke_input]" placeholder="Text Here" required>
+      <button type="submit">Create</button>
+    </fieldset>
+  </form>
+
+<div id="view-message"></div>
+      <form id="get-jokes" class="border hidden">
+        <fieldset>
+          <legend>View All Jokes Created</legend>
+          <h6><legend>(You can view jokes displayed in random order)</legend></h6>
+          <button type="submit">View</button>
+        </fieldset>
+      </form>
+      <div id="joke-area"></div>
+
+<div id="update-message"></div>
+      <form id="update-joke" class="border">
+        <fieldset>
+          <legend>Update the Joke You Created</legend>
+          <legend>(Update then click 'View' to see changes)</legend>
+          <input type="text" name="text" placeholder="Type ID Number" required>
+          <input type="text" name="joke[joke_input]" placeholder="Add New Joke" required>
+          <button type="submit">Update</button>
+        </fieldset>
+      </form>
+
+<div id="delete-message"></div>
+      <form id="delete-joke" class="border hidden">
+        <fieldset>
+          <legend>Delete A Joke You Created</legend>
+          <legend>(Delete Joke by ID number, then click 'View' to see changes)</legend>
+          <input type="text" name="joke_input" placeholder="Text Here" required>
+          <button type="submit">Delete</button>
+        </fieldset>
+      </form>
+
+    </body>
+</html>
